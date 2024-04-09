@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+          margin: 0;
+          background-image: url("fotos/fondo_nieve.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-attachment: fixed;
+          min-height: 100vh;
+          color: #000000; 
+        }
+      </style>
+    <title>Carrito de Compra</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Include custom CSS (if necessary) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Carrito de Compra</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="carrito">
+
+            </tbody>
+        </table>
+        <button id="agregar" class="btn btn-primary">Agregar Producto</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+
+        $('#agregar').click(function() {
+            $('#carrito').append('<tr><td>Producto</td><td>1</td><td><button class="btn btn-danger quitar">Quitar</button></td></tr>');
+        });
+        $(document).on('click', '.quitar', function() {
+            $(this).closest('tr').remove();
+        });
+    </script>
+</body>
+</html>
