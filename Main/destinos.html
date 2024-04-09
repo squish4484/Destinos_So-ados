@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos personalizados */
+    .carousel-item img {
+      max-width: 500px; /* Tamaño máximo de las imágenes */
+      height: auto;
+      cursor: pointer;
+    }
+  </style>
+  <style>
+    body {
+      margin: 0;
+      background-image: url("fotos/fondo_nieve.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      color: #000000; 
+    }
+  </style>
+</head>
+<link rel="shortcut icon" href="fotos/logo.png" />
+<body>
+  <header class="text-center">
+    <h1>Destinos</h1>
+  </header>
+
+  <main class="text-center mt-5">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-item active">
+        <a href="torres.html" target="_blank"><img src="fotos/paine.jpeg" alt="Imagen 1"></a>
+      </div>
+      <div class="carousel-item">
+        <a href="pagina2.html" target="_blank"><img src="fotos/parquenat.jpeg" alt="Imagen 2"></a>
+      </div>
+      <div class="carousel-item">
+        <a href="pagina3.html" target="_blank"><img src="fotos/farellones.jpg" alt="Imagen 3"></a>
+      </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
