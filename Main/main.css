@@ -1,0 +1,276 @@
+/*===============Propiedades Globales================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    background-color: #ffff;
+  
+}
+
+
+
+/*===================MENU==========================*/
+
+.logo img {
+    width: 40px;
+}
+
+ #menu a, button{
+     font-size: 18px !important;
+     font-weight: 600;
+     
+    
+ }
+
+ #menu a{
+     color:#3f3f3f;
+     
+ }
+
+
+/*===================SLIDER DE IMAGENES==========================*/
+
+.carousel-inner img {
+    max-height:50rem !important;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-100%);
+  text-align: left; /* Alinea el texto a la izquierda */
+  color: white; /* Color del texto */
+  }
+
+/*===================SECCION NUESTRO EQUIPO IMAGEN==========================*/
+
+
+
+#img-equipo{
+    max-height:30rem !important;
+    width:50%;
+}
+
+
+/*===================SECCION NUESTRO EQUIPO MAPA==========================*/
+#local {
+    margin-top:50px;
+    background-color: #f3f3f3;
+    display:flex;
+    justify-content: center; 
+    padding-bottom: 300px; 
+}
+
+.mapa {
+    background: url(../img/Captura\ de\ pantalla\ 2024-04-06\ a\ la\(s\)\ 01.16.28.png);
+    background-repeat: no-repeat;
+    width:100%;
+    height:500px;
+}
+
+
+.wrapper-local {
+    width:50%;
+    margin-left:100px;
+    padding-top:150px;
+}
+
+.numeros-mapa{
+    color: #038C65;
+}
+
+
+/*===========================SECCION EQUIPO MAIPU==================================*/
+#numeros-local{
+    margin:0 !important;
+    padding:0 !important;
+}
+#numeros-local div {
+    padding: 0 20px 0 0;   
+    text-align:left;
+    height:48px;
+}
+
+#numeros-local div:not(:last-child) {
+    border-right: 2px solid #3f3f3f;
+  }
+#numeros-local div:not(:first-child) {
+    padding-left:20px;
+  }
+
+#numeros-local p{
+    margin:0;
+}
+
+/*=========================CONTACTOS BACKGROUND================================*/
+
+#bg-contactos{
+    position:relative;
+    top: -130px;
+} 
+
+ #seccion-contacto{
+    background-color: #1b2a4e;
+    min-height:500px;
+    position:relative;
+}
+
+
+/*=========================CONTACTOS FORMULARIO================================*/
+
+#contenedor-formulario{
+    position:absolute;
+    top:30%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background: #fbfafa;
+    border-radius:5px;
+    
+}
+
+#titulo-formulario {
+    color: #3f3f3f;
+}
+
+
+
+
+/*=========================FOOTER================================*/
+
+.footer {
+    border-top: 2px solid #e8e8e8;
+    padding: 50px 0 0 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.link-img {
+    text-align: center;
+}
+
+.link-img img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.socials-2 img {
+    width: 30px;
+    margin: 10px;
+}
+
+.link h3 {
+    font-size:  22px;
+    color: #3f3f3f;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.link a {
+    font-size: 18px;
+    display: block;
+    color: #3f3f3f;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.link a:hover {
+    color: #e06927;
+}
+
+.footer-copy {
+    padding: 25px 0;
+    text-align: center;
+    border-top: 1px solid #e8e8e8;
+}
+
+.footer-copy p{
+    color: #7c7c7c;
+    font-size: 16px;
+    margin: 0;
+}
+
+/*=========================MEDIA QUERIES PANTALLA ANCHA================================*/
+
+@media (max-width:1200px){
+    #intro, #equipo {
+        width:90% !important;
+        margin:auto;
+    }
+  
+    #local {
+        flex-wrap: wrap;
+        padding-top:30px;
+   }
+   .wrapper-local {
+    width:90%;
+    margin:auto;
+    padding-top:50px;    
+   }
+ 
+}
+/*=========================MEDIA QUERIES PANTALLA SM================================*/
+
+
+@media (max-width:768px) {
+
+    #intro, #equipo{
+        width:90% !important;
+        margin:auto;
+    }
+
+    
+    #img-equipo{
+        max-height:20rem !important;
+        width:90%;
+    }
+    .wrapper-local {
+        width:90%;
+        margin:auto;
+        padding-top:50px;    
+    }
+    #local {
+        flex-wrap: wrap;
+    }
+    .mapa img {
+        width:100%;
+        height:auto;
+    }
+    #bg-contactos{
+        top: -120px;
+    }
+
+
+}
+/*=========================MEDIA QUERIES PANTALLA EXTRA-SM================================*/
+
+@media (max-width: 576px) {
+    #servicios-fila-2 {
+        width:100% !important;
+    }
+    #servicios-fila-1 {
+        width:100% !important;
+    }
+
+    .icono-wrap{
+        flex-wrap:wrap !important;
+        justify-content: center !important;
+        text-align: center;
+    }
+}
