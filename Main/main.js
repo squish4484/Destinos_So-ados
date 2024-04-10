@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Agregar el icono del carrito de compra a la derecha
     const cartIcon = document.createElement('i');
     cartIcon.classList.add('fas', 'fa-shopping-cart'); // Se asume que estás usando FontAwesome para los íconos
+  
 
     // Agregar la imagen del logo a la izquierda
     const logoImage = document.createElement('img');
