@@ -16,15 +16,25 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     background-color: #ffff;
+    margin: 0; /* Ajusta el margen del cuerpo a 0 */
+    padding: 0; 
   
 }
+
+.separator {
+    border: none;
+    border-top: 1px solid #ccc; 
+    margin: 20px 0; 
+}
+
 
 
 
 /*===================MENU==========================*/
 
-.logo img {
-    width: 40px;
+.logo-img {
+    width: 40px; /* Ancho deseado para el logo */
+    height: auto; /* Mantener la proporción del logo */
 }
 
  #menu a, button{
@@ -35,15 +45,36 @@ body {
  }
 
  #menu a{
-     color:#3f3f3f;
+     color:#333333;
      
  }
+
+ .navbar {
+    width: 100%;
+    z-index: 1000; 
+    background-image: linear-gradient(to right, #ff8a00, #da1b60); 
+}
+
+
+.contenido-pagina {
+    padding-top: 60px; 
+}
+
+.navbar-nav .nav-link {
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: scale(1.2);
+}
+
 
 
 /*===================SLIDER DE IMAGENES==========================*/
 
 .carousel-inner img {
-    max-height:50rem !important;
+    max-height:50rem !important
 }
 
 .carousel-caption {
@@ -51,9 +82,41 @@ body {
   bottom: 50%;
   left: 50%;
   transform: translateX(-100%);
-  text-align: left; /* Alinea el texto a la izquierda */
-  color: white; /* Color del texto */
+  text-align: left; 
+  color: white; 
   }
+
+.destinos_column {
+	width: 33.3%;
+    text-align: center;
+    padding-top: 30px;
+    box-sizing: border-box; 
+    float: left;
+}
+.destinos_column h3 {
+	color: #B3B3B3;
+    text-align: center;
+}
+.destinos_column p {
+	color: #717070;
+	background-color: #FFFFFF;
+}
+.cards {
+	width: 100%;
+    height: auto;
+    max-width: 400px;
+    max-height: 200px;
+}
+.destinos_column p {
+	padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
+    line-height: 25px;
+    font-weight: lighter;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 
 /*===================SECCION NUESTRO EQUIPO IMAGEN==========================*/
 
@@ -114,6 +177,47 @@ body {
 #numeros-local p{
     margin:0;
 }
+
+.destinos-turisticos {
+    padding: 20px;
+}
+
+.destinos-turisticos h2 {
+    text-align: center;
+}
+
+.destinos-turisticos .card {
+    margin-bottom: 20px;
+    height: 100%; /* Usa flexbox */
+    flex-direction: column; /* Alinear contenido verticalmente */
+}
+
+.destinos-turisticos .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.destinos-turisticos .card-body {
+    padding: 15px;
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Alinear contenido verticalmente */
+    justify-content: space-between; /* Distribuir espacio verticalmente */
+    height: 100%; /* Ajusta la altura de la tarjeta */
+}
+
+.destinos-turisticos .card-title,
+.destinos-turisticos .card-text {
+    flex: 1; /* Hacer que estos elementos ocupen el espacio disponible */
+}
+
+.destinos-turisticos .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+
+
+
 
 /*=========================CONTACTOS BACKGROUND================================*/
 
