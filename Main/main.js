@@ -4,26 +4,40 @@ document.addEventListener("DOMContentLoaded", function() {
     navbar.id = 'menu';
 
     const container = document.createElement('div');
-    container.classList.add('container', 'd-flex', 'justify-content-between'); // Añadir clases para alinear elementos
+    container.classList.add('container');
 
-    // Agregar el logo y el texto "VIAJA GO" a la izquierda del navbar
-    const brandContainer = document.createElement('div'); // Nuevo div para el logo y el texto
-    brandContainer.classList.add('brand-container', 'd-flex', 'align-items-center'); // Añadir clases para alinear elementos
+    // Agregar el icono del carrito de compra a la derecha
+    const cartIcon = document.createElement('i');
+    cartIcon.classList.add('fas', 'fa-shopping-cart'); // Se asume que estás usando FontAwesome para los íconos
 
+    // Agregar la imagen del logo a la izquierda
     const logoImage = document.createElement('img');
     logoImage.src = 'fotos/logo_2.png'; // Ruta a la imagen de tu logo
     logoImage.classList.add('logo-img');
 
-    const brandText = document.createElement('span');
-    brandText.classList.add('fs-5', 'text-white', 'fw-bold');
-    brandText.textContent = 'VIAJA GO';
-
-    brandContainer.appendChild(logoImage);
-    brandContainer.appendChild(brandText);
-
     const brand = document.createElement('a');
     brand.classList.add('navbar-brand');
-    brand.appendChild(brandContainer);
+
+    // Incluir el logo, el texto "VIAJA GO" y el icono del carrito de compra
+    brand.innerHTML = `
+        ${logoImage.outerHTML}
+        <span class="fs-5 text-white fw-bold">VIAJA GO</span>
+        ${cartIcon.outerHTML}
+    `;
+
+    const toggleButton = document.createElement('button');
+    toggleButton.classList.add('navbar-toggler');
+    toggleButton.type = 'button';
+    toggleButton.dataset.bsToggle = 'collapse';
+    toggleButton.dataset.bsTarget = '#navbarSupportedContent';
+    toggleButton.setAttribute('aria-controls', 'navbarSupportedContent');
+    toggleButton.setAttribute('aria-expanded', 'false');
+    toggleButton.setAttribute('aria-label', 'Toggle navigation');
+    toggleButton.innerHTML = `<span class="navbar-toggler-icon"></span>`;
+
+    const collapseDiv = document.createElement('div');
+    collapseDiv.classList.add('collapse', 'navbar-collapse');
+    collapseDiv.id = 'navbarSupportedContent';
 
     const ul = document.createElement('ul');
     ul.classList.add('navbar-nav', 'me-auto', 'mb-2', 'mb-lg-0');
@@ -50,20 +64,11 @@ document.addEventListener("DOMContentLoaded", function() {
         ul.appendChild(li);
     });
 
-    // Agregar el icono del carrito de compra a la derecha del navbar
-    const cartIcon = document.createElement('i');
-    cartIcon.classList.add('fas', 'fa-shopping-cart'); // Se asume que estás usando FontAwesome para los íconos
-    const cartLink = document.createElement('a');
-    cartLink.classList.add('nav-link');
-    cartLink.href = 'carrito.html';
-    cartLink.appendChild(cartIcon);
-
-    // Alineación de elementos
+    collapseDiv.appendChild(ul);
     container.appendChild(brand);
-    container.appendChild(ul);
-    container.appendChild(cartLink);
-
+    container.appendChild(toggleButton);
+    container.appendChild(collapseDiv);
     navbar.appendChild(container);
-   
+    
     document.body.prepend(navbar);
 });
