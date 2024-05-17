@@ -16,7 +16,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     background-color: #ffff;
-    margin: 0; /* Ajusta el margen del cuerpo a 0 */
+    margin: 0; 
     padding: 0; 
   
 }
@@ -33,8 +33,8 @@ body {
 /*===================MENU==========================*/
 
 .logo-img {
-    width: 40px; /* Ancho deseado para el logo */
-    height: auto; /* Mantener la proporción del logo */
+    width: 40px; 
+    height: auto; 
 }
 
  #menu a, button{
@@ -71,7 +71,7 @@ body {
 
 
 
-/*===================SLIDER DE IMAGENES==========================*/
+/*===================CAROUSEL DE IMAGENES==========================*/
 
 .carousel-inner img {
     max-height:50rem !important
@@ -86,98 +86,31 @@ body {
   color: white; 
   }
 
-.destinos_column {
-	width: 33.3%;
-    text-align: center;
-    padding-top: 30px;
-    box-sizing: border-box; 
-    float: left;
-}
-.destinos_column h3 {
-	color: #B3B3B3;
-    text-align: center;
-}
-.destinos_column p {
-	color: #717070;
-	background-color: #FFFFFF;
-}
-.cards {
-	width: 100%;
-    height: auto;
-    max-width: 400px;
-    max-height: 200px;
-}
-.destinos_column p {
-	padding-left: 30px;
-    padding-right: 30px;
-    text-align: justify;
-    line-height: 25px;
-    font-weight: lighter;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-
 /*===================SECCION NUESTRO EQUIPO IMAGEN==========================*/
 
 
 
-#img-equipo{
-    max-height:30rem !important;
-    width:50%;
+#img-equipo {
+    max-height: 30rem;
+    width: 50%;
+    border-radius: 10px; 
+    transition: transform 0.3s ease;
 }
+
+#img-equipo:hover {
+    transform: scale(1.05); 
+}
+
 
 
 /*===================SECCION NUESTRO EQUIPO MAPA==========================*/
-#local {
-    margin-top:50px;
-    background-color: #f3f3f3;
-    display:flex;
-    justify-content: center; 
-    padding-bottom: 300px; 
-}
 
-.mapa {
-    background: url(../img/Captura\ de\ pantalla\ 2024-04-06\ a\ la\(s\)\ 01.16.28.png);
-    background-repeat: no-repeat;
-    width:100%;
-    height:500px;
+.numeros-mapa_2{
+    color: #ff8a00;
 }
 
 
-.wrapper-local {
-    width:50%;
-    margin-left:100px;
-    padding-top:150px;
-}
-
-.numeros-mapa{
-    color: #038C65;
-}
-
-
-/*===========================SECCION EQUIPO MAIPU==================================*/
-#numeros-local{
-    margin:0 !important;
-    padding:0 !important;
-}
-#numeros-local div {
-    padding: 0 20px 0 0;   
-    text-align:left;
-    height:48px;
-}
-
-#numeros-local div:not(:last-child) {
-    border-right: 2px solid #3f3f3f;
-  }
-#numeros-local div:not(:first-child) {
-    padding-left:20px;
-  }
-
-#numeros-local p{
-    margin:0;
-}
-
+/*===========================DESTINOS==================================*/
 .destinos-turisticos {
     padding: 20px;
 }
@@ -188,8 +121,8 @@ body {
 
 .destinos-turisticos .card {
     margin-bottom: 20px;
-    height: 100%; /* Usa flexbox */
-    flex-direction: column; /* Alinear contenido verticalmente */
+    height: 100%; 
+    flex-direction: column; 
 }
 
 .destinos-turisticos .card-img-top {
@@ -199,15 +132,15 @@ body {
 
 .destinos-turisticos .card-body {
     padding: 15px;
-    display: flex; /* Usa flexbox */
-    flex-direction: column; /* Alinear contenido verticalmente */
-    justify-content: space-between; /* Distribuir espacio verticalmente */
-    height: 100%; /* Ajusta la altura de la tarjeta */
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 100%; 
 }
 
 .destinos-turisticos .card-title,
 .destinos-turisticos .card-text {
-    flex: 1; /* Hacer que estos elementos ocupen el espacio disponible */
+    flex: 1; 
 }
 
 .destinos-turisticos .btn-primary {
@@ -215,100 +148,226 @@ body {
     border-color: #007bff;
 }
 
+/*===================MODAL==========================*/
 
 
-
-
-/*=========================CONTACTOS BACKGROUND================================*/
-
-#bg-contactos{
-    position:relative;
-    top: -130px;
-} 
-
- #seccion-contacto{
-    background-color: #1b2a4e;
-    min-height:500px;
-    position:relative;
-}
-
-
-/*=========================CONTACTOS FORMULARIO================================*/
-
-#contenedor-formulario{
-    position:absolute;
-    top:30%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    background: #fbfafa;
-    border-radius:5px;
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
     
-}
+  }
+  
 
-#titulo-formulario {
-    color: #3f3f3f;
-}
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
 
-
-
-
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
 /*=========================FOOTER================================*/
 
 .footer {
-    border-top: 2px solid #e8e8e8;
-    padding: 50px 0 0 0;
-}
-
-.footer-links {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
-}
-
-.link-img {
-    text-align: center;
-}
-
-.link-img img {
-    width: 70px;
-    margin-bottom: 10px;
-}
-
-.socials-2 img {
-    width: 30px;
-    margin: 10px;
-}
-
-.link h3 {
-    font-size:  22px;
-    color: #3f3f3f;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.link a {
+  }
+  
+  .column {
+    flex: 1;
+    padding: 0 15px;
+  }
+  
+  .column h3 {
     font-size: 18px;
-    display: block;
-    color: #3f3f3f;
-    margin-bottom: 20px;
-    text-align: left;
-}
+    margin-bottom: 10px;
+  }
+  
+  .column p,
+  .column li {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .column ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .column form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .column input[type="email"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 100%;
+    max-width: 220px;
+  }
+  
+  .column button {
+    padding: 5px 15px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
-.link a:hover {
-    color: #e06927;
-}
-
-.footer-copy {
-    padding: 25px 0;
+  /*=========================PAGINA NOSOTROS================================*/
+  .team-section {
+    padding: 50px 0;
+    background-color: #fff;
     text-align: center;
-    border-top: 1px solid #e8e8e8;
 }
 
-.footer-copy p{
-    color: #7c7c7c;
-    font-size: 16px;
-    margin: 0;
+.team-section h2 {
+    margin-bottom: 20px;
 }
+
+.team-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/*=========================BANNER DE PAGINAS================================*/
+.banner {
+    position: relative;
+    text-align: left;
+  }
+  
+  .banner-image {
+    max-height: 50rem !important;
+    width: 100%; 
+  }
+  
+  .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+  
+  .banner-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: left !important;;
+  }
+
+  /*=========================PAQUETES DE VIAJE================================*/
+
+  h1, h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: #444;
+  }
+  
+  /* Estilos para la cabecera */
+  header {
+    background-color: #444;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header img {
+    width: 10%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilos para la sección */
+  .plan-viaje {
+    background-color: #f7f7f7;
+    padding: 2rem 0;
+  }
+  
+  .container-plan-viaje {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .titulo-seccion {
+    text-align: center;
+  }
+  
+  /* Estilos para las opciones de viaje */
+  .opciones-viaje {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .opcion-viaje {
+    width: 30%;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .opcion-viaje img {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .opcion-viaje h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  
+
+
 
 /*=========================MEDIA QUERIES PANTALLA ANCHA================================*/
 
@@ -329,6 +388,9 @@ body {
    }
  
 }
+
+  
+
 /*=========================MEDIA QUERIES PANTALLA SM================================*/
 
 

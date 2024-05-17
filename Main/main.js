@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
+    
+/*=========================NAVBAR================================*/
+document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.createElement('nav');
     navbar.classList.add('navbar', 'navbar-expand-lg', 'navbar-light', 'p-3');
     navbar.id = 'menu';
@@ -6,9 +8,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const container = document.createElement('div');
     container.classList.add('container');
 
-    // Agregar el icono del carrito de compra a la derecha
-    const cartIcon = document.createElement('i');
-    cartIcon.classList.add('fas', 'fa-shopping-cart'); // Se asume que estás usando FontAwesome para los íconos
+    // Crear el enlace al carrito de compra
+    const cartLink = document.createElement('a');
+    cartLink.href = 'carrito.html'; // Enlace a la página del carrito de compra
+    cartLink.classList.add('cart-button');
+
+    // Agregar el botón del carrito de compra al enlace
+    const cartButton = document.createElement('button');
+    cartButton.innerHTML = '<i class="fas fa-shopping-cart"></i>'; // Se asume que estás usando FontAwesome para los íconos
+    cartButton.classList.add('btn', 'btn-outline-dark');
+
+    // Agregar el botón del carrito de compra al enlace
+    cartLink.appendChild(cartButton);
 
     // Agregar la imagen del logo a la izquierda
     const logoImage = document.createElement('img');
@@ -18,12 +29,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const brand = document.createElement('a');
     brand.classList.add('navbar-brand');
 
-    // Incluir el logo, el texto "VIAJA GO" y el icono del carrito de compra
+    // Incluir el logo, el texto "VIAJA GO" y el botón del carrito de compra
     brand.innerHTML = `
         ${logoImage.outerHTML}
         <span class="fs-5 text-white fw-bold">VIAJA GO</span>
-        ${cartIcon.outerHTML}
     `;
+    brand.appendChild(cartLink);
 
     const toggleButton = document.createElement('button');
     toggleButton.classList.add('navbar-toggler');
@@ -43,12 +54,12 @@ document.addEventListener("DOMContentLoaded", function() {
     ul.classList.add('navbar-nav', 'me-auto', 'mb-2', 'mb-lg-0');
 
     const menuItems = [
-        { text: 'Inicio', href: '#' },
+        { text: 'Inicio', href: 'Index.html' },
         { text: 'Paquetes de Viaje', href: '#intro' },
-        { text: 'Viaja por Chile', href: '#equipo' },
-        { text: 'Latinoamérica', href: '#equipo' },
-        { text: 'Blog', href: '#servicios-fila-1' },
-        { text: 'Nosotros', href: '#equipo' }
+        { text: 'Viaja por Chile', href: '#' },
+        { text: 'Latinoamérica', href: 'latinoamerica.html' },
+        { text: 'Blog', href: '#' },
+        { text: 'Nosotros', href: 'nosotros.html' }
     ];
 
     menuItems.forEach(item => {
@@ -69,6 +80,94 @@ document.addEventListener("DOMContentLoaded", function() {
     container.appendChild(toggleButton);
     container.appendChild(collapseDiv);
     navbar.appendChild(container);
-    
+
     document.body.prepend(navbar);
 });
+
+
+/*===========================TYPEWRITER==================================*/
+
+let app = document.getElementById('typewriter');
+
+let typewriter = new Typewriter(app, {
+    loop: true,
+    delay: 75,
+});
+
+typewriter
+    .pauseFor(2500)
+    .typeString('¡Tu Socio en la Aventura!')
+    .pauseFor(200)
+    .deleteChars(10)
+    .start();
+
+/*===========================FOOTER==================================*/
+
+// Obtén una referencia al elemento del footer
+const footer = document.querySelector('.footer');
+
+// Crea los elementos y agrega el contenido
+const footerContainer = document.createElement('div');
+footerContainer.classList.add('footer-container');
+
+const column1 = document.createElement('div');
+column1.classList.add('column');
+column1.innerHTML = `
+  <h3>Información de contacto:</h3>
+  <p>Teléfono: +56 9 1234 5678</p>
+  <p>Correo electrónico: info@viajago.com</p>
+`;
+
+const column2 = document.createElement('div');
+column2.classList.add('column');
+column2.innerHTML = `
+  <h3>Información Importante:</h3>
+  <ul>
+    <li><a href="formulario.html">Contacto</a></li>
+    <li><a href="#">Preguntas frecuentes</a></li>
+    <li><a href="#">Términos y condiciones</a></li>
+  </ul>
+`;
+
+const column3 = document.createElement('div');
+column3.classList.add('column');
+column3.innerHTML = `
+  <h3>¡Suscríbete a nuestro boletín!</h3>
+  <p>Recibe las últimas noticias y promociones directamente en tu bandeja de entrada.</p>
+  <form>
+    <input type="email" placeholder="Correo electrónico" required>
+    <button type="submit">Suscribirse</button>
+  </form>
+`;
+
+// Agrega los elementos al DOM
+footer.appendChild(footerContainer);
+footerContainer.appendChild(column1);
+footerContainer.appendChild(column2);
+footerContainer.appendChild(column3);
+
+/*=========================MODAL================================*/
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Show the modal when the page loads
+window.onload = function() {
+  modal.style.display = "block";
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+

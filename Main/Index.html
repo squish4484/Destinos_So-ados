@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="fotos/logo_2.png" />
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,6 +21,18 @@
   <!-- NAVBAR -->
   <!--========================================================== -->
   <div id="navbar-container"></div>
+
+    <!--========================================================== -->
+  <!-- MODAL -->
+  <!--========================================================== -->
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>¡Bienvenido a nuestra página!</h2>
+    <p>¡Nos complace tenerte aquí! Estamos seguros de que encontrarás destinos increíbles a precios extraordinarios.</p>
+  </div>
+</div>
   <!--========================================================== -->
   <!-- CAROUSEL DE IMAGENES-->
   <!--========================================================== -->
@@ -45,8 +58,6 @@
         <img src="fotos/img-4.png" class="d-block w-100" alt="">
       </div>
 
-
-
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -58,13 +69,9 @@
     </button>
   </div>
 
-
-
   <!--========================================================== -->
   <!-- INTRODUCCION DE SERVICIOS-->
   <!--========================================================== -->
-
-
   <section class="d-flex flex-column justify-content-center align-items-center pt-5  text-center w-50 m-auto"
     id="intro">
     <h1 class="p-3 fs-2 border-top border-3"><span>Viaja Go</span></h1>
@@ -87,7 +94,8 @@
             <img src="fotos/chiloe.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Puerto Varas y Chiloé</h5>
-              <p class="card-text">Conduce a Chiloé, disfruta de las casas sobre pilotes y visita los pueblos de Chacao, Castro y Dalcahue.</p>
+              <p class="card-text">Conduce a Chiloé, disfruta de las casas sobre pilotes y visita los pueblos de Chacao,
+                Castro y Dalcahue.</p>
               <a href="#" class="btn btn-primary">Ver destino</a>
             </div>
           </div>
@@ -97,7 +105,8 @@
             <img src="fotos/pucon.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Pucón, Huilo Huilo y Termas Geométricas</h5>
-              <p class="card-text">Tour de día completo desde Pucón para explorar el Lago Pirehueico y Puerto Fuy. Destacados incluyen la Cascada de Huilo Huilo y vistas panorámicas del lago.</p>
+              <p class="card-text">Tour de día completo desde Pucón para explorar el Lago Pirehueico y Puerto Fuy.
+                Destacados incluyen la Cascada de Huilo Huilo y vistas panorámicas del lago.</p>
               <a href="#" class="btn btn-primary">Ver destino</a>
             </div>
           </div>
@@ -107,7 +116,8 @@
             <img src="fotos/buenos_aires.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Buenos Aires</h5>
-              <p class="card-text">Buenos Aires Ciudad vibrante, rica en cultura, famosa por su arquitectura, tango y gastronomía.</p>
+              <p class="card-text">Buenos Aires Ciudad vibrante, rica en cultura, famosa por su arquitectura, tango y
+                gastronomía.</p>
               <a href="#" class="btn btn-primary">Ver destino</a>
             </div>
           </div>
@@ -117,102 +127,32 @@
   </section>
 
   <hr class="separator">
-
-
   <!--========================================================== -->
   <!-- SECCION ACERCA DE NOSOTROS-->
   <!--========================================================== -->
   <section class="d-flex flex-column justify-content-center align-items-center pt-5  text-center w-50 m-auto"
     id="intro">
-    <div class="container w-50 m-auto text-center" id="equipo">
-      <h1 class="mb-5 fs-2">¡Un equipo excepcional, <span class="text-white">resultados extraordinarios!</span></h1>
-      <p class="fs-4">La Fundación <span class="text-white">Ayuda a un Peludo</span> se basa en la generosidad de
-        personas comprometidas con el bienestar animal, promoviendo el voluntariado como herramienta para mejorar la
-        sociedad. Su labor se fundamenta en valores como el compromiso, trabajo en equipo, responsabilidad, integridad y
-        alegría, buscando salvar vidas humanas y animales con pasión y colaboración conjunta.</p>
+    <div class="container-fluid text-center" id="equipo">
+      <h1>Nuestro Equipo:</h1>
+      <h2 class="numeros-mapa_2 mb-4" id="typewriter"></h2>
+      <p class="fs-5">En nuestra agencia de turismo, nuestro equipo está dedicado a hacer que cada detalle de tu viaje
+        sea perfecto.
+        Desde expertos en destinos hasta guías locales apasionados, estamos aquí para superar tus expectativas y
+        brindarte una experiencia inolvidable.
+        ¡Bienvenido a bordo!</p>
     </div>
-
     <div class="mt-5 text-center">
-      <img id="img-equipo" src="./img/equipod.png" alt="equipo">
+      <img id="img-equipo" src="fotos/equipo.png" alt="equipo">
     </div>
-
-    <div id="local" class="border-top border-2">
-      <div class="mapa"> </div>
-      <div>
-        <div class="wrapper-local">
-          <h2>Ubicado en Maipu, Santiago</h2>
-          <h2 class="numeros-mapa mb-4" id="typewriter"></h2>
-          <p class="fs-5 text-body">Estamos orgullosos de estar ubicados en Maipú, comuna de Santiago, una comunidad
-            vibrante y comprometida, lo que nos permite una mayor cercanía y colaboración con nuestros vecinos para
-            impulsar juntos el bienestar animal y la tenencia responsable en nuestra área.</p>
-          <section class="d-flex justify-content-start" id="numeros-local">
-            <div>
-              <p class="numeros-mapa s-5">180</p>
-              <p>Dias soleados</p>
-            </div>
-            <div>
-              <p class="numeros-mapa s-5">100%</p>
-              <p>Ambiente acogedor</p>
-            </div>
-            <div>
-              <p class="numeros-mapa s-5">22 °C</p>
-              <p>Temperatura</p>
-            </div>
-          </section>
-        </div>
-      </div>
-    </div>
-
   </section>
-
+  <br>
+  <br>
   <!--========================================================== -->
   <!--FOOTER-->
   <!--========================================================== -->
 
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-links">
-        <div class="link-img">
-          <img src="img/love.png" alt="">
-          <div class="socials-2">
-            <a href="https://www.instagram.com/instagram/" target="_blank"> <img src="img/r1.svg" alt=""></a>
-            <a href="#" target="_blank"> <img src="img/r2.svg" alt=""></a>
-            <a href="https://www.facebook.com/?locale=es_LA" target="_blank"> <img src="img/r3.svg" alt=""></a>
-          </div>
-        </div>
-        <div class="link">
-          <h3>Necesito Ayuda:</h3>
-          <ul>
-            <li><a href="#">Se me perdió mi mascota</a></li>
-            <li><a href="#">Encontré una mascota perdida</a></li>
-            <li><a href="#">Encontré una mascota herida o abandonada</a></li>
-          </ul>
-        </div>
-
-        <div class="link">
-          <h3>Quiero Ayudar:</h3>
-          <ul>
-            <li><a href="#">Donaciones y Socios</a></li>
-            <li><a href="#">Quiero ser voluntario</a></li>
-            <li><a href="#">Quiero ser hogar temporal</a></li>
-          </ul>
-        </div>
-
-        <div class="link">
-          <h3>Quiero Adoptar:</h3>
-          <ul>
-            <li><a href="#">En adopción</a></li>
-            <li><a href="#">Proceso de adopción</a></li>
-            <li><a href="#">Costo de adopción</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-copy">
-        <p>Copyright &copy; 2024 - Viaja Go</p>
-      </div>
-    </div>
-  </footer>
+  <footer class="footer"></footer>
 
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
