@@ -39,9 +39,7 @@ body {
 
  #menu a, button{
      font-size: 18px !important;
-     font-weight: 600;
-     
-    
+     font-weight: 600;   
  }
 
  #menu a{
@@ -187,6 +185,8 @@ body {
     text-decoration: none;
     cursor: pointer;
   }
+
+
   
 /*=========================FOOTER================================*/
 
