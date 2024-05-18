@@ -103,10 +103,8 @@ typewriter
 
 /*===========================FOOTER==================================*/
 
-// Obtén una referencia al elemento del footer
 const footer = document.querySelector('.footer');
 
-// Crea los elementos y agrega el contenido
 const footerContainer = document.createElement('div');
 footerContainer.classList.add('footer-container');
 
@@ -140,7 +138,7 @@ column3.innerHTML = `
 </form>
 `;
 
-// Agrega los elementos al DOM
+
 footer.appendChild(footerContainer);
 footerContainer.appendChild(column1);
 footerContainer.appendChild(column2);
@@ -149,12 +147,12 @@ footerContainer.appendChild(column3);
 
 
 
+/*===========================MODAL==================================*/
 
-
-// Obtener el modal
+// ObteneMOS el modal
 var modal = document.getElementById('MIMODAL');
 
-// Obtener la imagen y colocarla dentro del modal
+// Obtenemos la imagen y la colocamos dentro del modal
 var images = document.querySelectorAll('.gallery-img');
 var modalImg = document.getElementById("modalImage");
 var captionText = document.getElementById("caption");
@@ -167,10 +165,10 @@ images.forEach(function(img) {
   }
 });
 
-// Obtener el elemento <span> que cierra el modal
+// Obtenemos el elemento <span> que cerrara el modal
 var span = document.getElementsByClassName("close")[0];
 
-// Cuando se hace clic en <span> (x), cerrar el modal
+// Cuando se hace click en <span> (x), cerramos el modal
 span.onclick = function() {
   modal.style.display = "none";
 }

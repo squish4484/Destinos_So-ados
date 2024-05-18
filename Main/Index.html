@@ -11,9 +11,9 @@
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="main.css">
-  <script src="navbar.js"></script>
   <script src="https://kit.fontawesome.com/4f8f9ca200.js" crossorigin="anonymous"></script>
   <title>VIAJA GO</title>
+
 </head>
 
 <body>
@@ -22,17 +22,6 @@
   <!--========================================================== -->
   <div id="navbar-container"></div>
 
-    <!--========================================================== -->
-  <!-- MODAL -->
-  <!--========================================================== -->
-<!-- Modal -->
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>¡Bienvenido a nuestra página!</h2>
-    <p>¡Nos complace tenerte aquí! Estamos seguros de que encontrarás destinos increíbles a precios extraordinarios.</p>
-  </div>
-</div>
   <!--========================================================== -->
   <!-- CAROUSEL DE IMAGENES-->
   <!--========================================================== -->
@@ -96,7 +85,7 @@
               <h5 class="card-title">Puerto Varas y Chiloé</h5>
               <p class="card-text">Conduce a Chiloé, disfruta de las casas sobre pilotes y visita los pueblos de Chacao,
                 Castro y Dalcahue.</p>
-              <a href="#" class="btn btn-primary">Ver destino</a>
+              <a href="#" class="btn2 btn-primary">Ver destino</a>
             </div>
           </div>
         </div>
@@ -107,18 +96,17 @@
               <h5 class="card-title">Pucón, Huilo Huilo y Termas Geométricas</h5>
               <p class="card-text">Tour de día completo desde Pucón para explorar el Lago Pirehueico y Puerto Fuy.
                 Destacados incluyen la Cascada de Huilo Huilo y vistas panorámicas del lago.</p>
-              <a href="#" class="btn btn-primary">Ver destino</a>
+              <a href="#" class="btn2 btn-primary">Ver destino</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="fotos/buenos_aires.jpeg" class="card-img-top" alt="...">
+            <img src="fotos/torres_del_paine.png" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Buenos Aires</h5>
-              <p class="card-text">Buenos Aires Ciudad vibrante, rica en cultura, famosa por su arquitectura, tango y
-                gastronomía.</p>
-              <a href="#" class="btn btn-primary">Ver destino</a>
+              <h5 class="card-title">Torres del Paine</h5>
+              <p class="card-text">Impresionante parque en la Patagonia chilena, famoso por sus picos de granito, glaciares y biodiversidad. Ideal para trekking y amantes de la naturaleza.</p>
+              <a href="torres_del_paine.html" class="btn2 btn-primary">Ver destino</a>
             </div>
           </div>
         </div>
@@ -127,6 +115,22 @@
   </section>
 
   <hr class="separator">
+
+  <!-- Botón para ver imágenes de Unsplash -->
+  <section class="d-flex flex-column justify-content-center align-items-center pt-5  text-center w-50 m-auto"
+    id="galeria">
+  <h1>Galeria</h1>
+  <div class="btn2-container">
+    <button id="showImagesBtn" class="btn2">Ver más imágenes</button>
+    <button id="hideImagesBtn" class="btn2" style="display: none;">Ocultar imágenes</button>
+</div>
+<div class="gallery-container" id="gallery"></div>
+</section>
+
+
+
+  <hr class="separator">
+
   <!--========================================================== -->
   <!-- SECCION ACERCA DE NOSOTROS-->
   <!--========================================================== -->
@@ -134,7 +138,7 @@
     id="intro">
     <div class="container-fluid text-center" id="equipo">
       <h1>Nuestro Equipo:</h1>
-      <h2 class="numeros-mapa_2 mb-4" id="typewriter"></h2>
+      <h2 class="tipeo mb-4" id="typewriter"></h2>
       <p class="fs-5">En nuestra agencia de turismo, nuestro equipo está dedicado a hacer que cada detalle de tu viaje
         sea perfecto.
         Desde expertos en destinos hasta guías locales apasionados, estamos aquí para superar tus expectativas y
@@ -161,6 +165,7 @@
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   <script src="main.js"></script>
+  <script src="galeria_inicial.js"></script>
 </body>
 
 </html>
