@@ -1,91 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="fotos/logo_2.png" />
-      
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="estilos_galerias_torres_del_paine.css">
-        <script src="https://kit.fontawesome.com/4f8f9ca200.js" crossorigin="anonymous"></script>
-        <title>TORRES DEL PAINE</title>
-      </head>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="fotos/logo_2.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos_galerias_torres_del_paine.css">
+    <link rel="stylesheet" href="estilos_tarjetas_de_viajes.css">
+    <script src="https://kit.fontawesome.com/4f8f9ca200.js" crossorigin="anonymous"></script>
+    <title>TORRES DEL PAINE</title>
+  </head>
 </head>
+
 <body>
 
-    <!-- Navbar -->
+  <!-- Navbar -->
 
-    <div id="navbar-container"></div>
-    <!-- Banner -->
-    <section class="banner">
-        <img src="fotos/torres_del_paine.png" alt="Banner Imagen" class="banner-img">
-        <div class="content-banner">
-            <p>Agencia de turismo</p>
-            <h2>Torres del Paine</h2>
+  <div id="navbar-container"></div>
+  <!-- Banner -->
+  <section class="banner">
+    <img src="fotos/torres_del_paine.png" alt="Banner Imagen" class="banner-img">
+    <div class="content-banner">
+      <p>Agencia de turismo</p>
+      <h2>Torres del Paine</h2>
+    </div>
+  </section>
+
+  <!-- Galería de imágenes -->
+  <div class="gallery-container">
+    <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_1.png"
+        alt="Torres del Paine 1"></div>
+    <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_2.png"
+        alt="Torres del Paine 2"></div>
+    <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_3.png"
+        alt="Torres del Paine 3"></div>
+    <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_4.png"
+        alt="Torres del Paine 4"></div>
+    <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_5.png"
+        alt="Torres del Paine 5"></div>
+    <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_6.png"
+        alt="Torres del Paine 6"></div>
+    <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_7.png"
+        alt="Torres del Paine 7"></div>
+    <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_8.png"
+        alt="Torres del Paine 8"></div>
+    <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_9.png"
+        alt="Torres del Paine 9"></div>
+  </div>
+
+  <!-- El Modal -->
+  <div id="MIMODAL" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+  </div>
+
+  <hr class="separator">
+
+  <section>
+    <div class="card-viaje-container">
+      <div class="card-viaje">
+        <h2 class="card-viaje__titulo">4 Días</h2>
+        <p class="card-viaje__precio">Desde: $396.990 CLP</p>
+        <p class="card-viaje__descripcion">Incluye: 4 días. Traslado desde el aeropuerto, alojamiento en Habitación
+          doble con baño privado, asistencia en viaje, desayunos y full Day Torres del Paine + Cueva del Milodón o
+          Trekking Base Torre.</p>
+        <ul class="card-viaje__lugares">
+          <br>
+          <p>Puedes visitar caminando</p>
+          <li>Monumento al Viento</li>
+          <li>Muelle Histórico</li>
+          <li>Monumento de la Mano</li>
+          <li>Costanera de Puerto Natales</li>
+          <br>
+          <p>Puntos a visitar Full Day Torres del Paine + Cueva del Milodón</p>
+          <br>
+          <li>Cerro Castillo</li>
+          <li>Mirador del Lago Sarmiento</li>
+          <li>Mirador Laguna Amarga</li>
+          <li>Lago Nordenskjöld</li>
+          <li>Cascada Salto Grande</li>
+          <li>Mirador del Lago Pehoé</li>
+          <li>Lago Grey</li>
+          <li>Monumento Natural Cueva del Milodón</li>
+        </ul>
+      </div>
+
+      <div class="card-viaje-container">
+        <div class="card-viaje">
+          <h2 class="card-viaje__titulo">5 Días</h2>
+          <p class="card-viaje__precio">Desde: $556.990 CLP</p>
+          <p class="card-viaje__descripcion">Incluye: 5 días. Traslado desde el aeropuerto, alojamiento en Habitación
+            doble con baño privado, asistencia en viaje, desayunos y Full Day Torres del Paine + Cueva del Milodon o
+            Trekking Base Torre
+            Tour con navegación Glaciar Grey</p>
+          <ul class="card-viaje__lugares">
+            <br>
+            <p>Puedes visitar caminando</p>
+            <li>Monumento al Viento</li>
+            <li>Muelle Histórico</li>
+            <li>Monumento de la Mano</li>
+            <li>Costanera de Puerto Natales</li>
+            <br>
+            <p>Puntos a visitar Full Day Torres del Paine + Cueva del Milodón + Navegación Glaciar Grey</p>
+            <br>
+            <li>Cerro Castillo</li>
+            <li>Mirador del Lago Sarmiento</li>
+            <li>Mirador Laguna Amarga</li>
+            <li>Lago Nordenskjöld</li>
+            <li>Cascada Salto Grande</li>
+            <li>Mirador del Lago Pehoé</li>
+            <li>Lago Grey</li>
+            <li>Monumento Natural Cueva del Milodón</li>
+            <li>Navegación Glaciar Grey</li>
+          </ul>
         </div>
-    </section>
+      </div>
+  </section>
+  <br>
 
-    <!-- Galería de imágenes -->
-    <div class="gallery-container">
-       <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_1.png" alt="Torres del Paine 1"></div>
-       <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_2.png" alt="Torres del Paine 2"></div>
-       <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_3.png" alt="Torres del Paine 3"></div>
-       <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_4.png" alt="Torres del Paine 4"></div>
-       <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_5.png" alt="Torres del Paine 5"></div>
-       <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_6.png" alt="Torres del Paine 6"></div>
-       <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_7.png" alt="Torres del Paine 7"></div>
-       <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_8.png" alt="Torres del Paine 8"></div>
-       <div class="gallery-item"><img class="gallery-img" src="fotos/fotos_torres_del_paine/galeria_torres_del_paine_9.png" alt="Torres del Paine 9"></div>
-    </div>
+  <!-- Footer -->
+  <footer class="footer"></footer>
 
-    <!-- El Modal -->
-    <div id="MIMODAL" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div id="caption"></div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer"></footer>
-   
-    <script>
-        // Obtener el modal
-        var modal = document.getElementById('mimodal');
-
-        // Obtener la imagen y colocarla dentro del modal
-        var images = document.querySelectorAll('.gallery-img');
-        var modalImg = document.getElementById("modalImage");
-        var captionText = document.getElementById("caption");
-
-        images.forEach(function(img) {
-            img.onclick = function() {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            }
-        });
-
-        // Obtener el elemento <span> que cierra el modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // Cuando se hace clic en <span> (x), cerrar el modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-    </script>
-
-      <!-- Option 1: Bootstrap Bundle with Popper -->
+  <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-  crossorigin="anonymous"></script>
-<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-<script src="main.js"></script>
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="main.js"></script>
 
 </body>
+
 </html>
